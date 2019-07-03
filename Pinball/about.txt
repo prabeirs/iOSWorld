@@ -1,0 +1,8 @@
+This game is about a Pinball. The player get to see a view with four buttons - Edit, Replay, Ball remains:5, Score:0.
+She gets initially 5 pinballs to be thrown from a height. It should be always above a minimum level. First she should click
+the Edit button and create any number of obstacles with some box like sticks in an arbitrary manner. The purpose of these
+obstacles is to let the falling pinball hit these obstacles and then fall down farther till it hit the ground level.
+When a pinball goes down and falls in a green rotating slot at the bottom then the player gets a score plus and also a free
+ball. But when the pinball falls in a red rotating slot at the bottom then the player looses a score (minus) and do not get
+a free ball. There is no point or meaningless in the player just trying to let fall the pinballs without creating any obstacles.
+Though this is possible and let gather scores and free pinballs too but not useful.
