@@ -27,7 +27,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         navigationController?.navigationBar.prefersLargeTitles = true
         
@@ -40,21 +39,22 @@ class ViewController: UIViewController {
         if wordGuessLbl?.tag == 0 {
             wordGuessLbl.font = UIFont.systemFont(ofSize: 24)
             wordGuessLbl.text = ""
-            wordGuessLbl.numberOfLines = 0
-            wordGuessLbl.textAlignment = .center
+            wordGuessLbl.numberOfLines = 1
+            wordGuessLbl.textAlignment = .left
         }
         
         if scoreLbl?.tag == 1 {
             scoreLbl.font = UIFont.systemFont(ofSize: 24)
             scoreLbl.text = "0/\(maxAttempts)"
             scoreLbl.numberOfLines = 3
-            scoreLbl.textAlignment = .center
+            scoreLbl.textAlignment = .left
+            
         }
         
         if manLbl?.tag == 2 {
             manLbl.font = UIFont.systemFont(ofSize: 24)
             manLbl.text = "Guess the words in \(maxAttempts) attempts"
-            manLbl.textAlignment = .center
+            manLbl.textAlignment = .left
         }
         
         if usedLettersLbl?.tag == 3 {
@@ -63,6 +63,7 @@ class ViewController: UIViewController {
             usedLettersLbl.numberOfLines = 2
             usedLettersLbl.textAlignment = .left
         }
+        
         
         DispatchQueue.global().async {
             self.loadWords()
