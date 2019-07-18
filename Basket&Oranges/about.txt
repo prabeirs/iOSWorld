@@ -1,0 +1,24 @@
+Problem statement
+You have n number of baskets. Each basket has some oranges in it. Harry needs m baskets with an equal number of oranges. You have to give it to him at the earliest. You need to add oranges to bags since it takes less time than removing oranges from bags. Determine the minimum number of oranges required to get m bags containing an equal number of oranges.
+
+Input
+The first line contains an integer n, the number of bags (1 <= n <= 100)
+The second line contains an integer m, the required number of bags (1<=m<=n)
+It is followed by n lines. The ith line contains the number of oranges in with bag
+
+Output
+The output should contain the number of oranges which need to be added
+
+Sample test case
+
+INput
+5
+2
+6
+8
+9
+11
+4
+
+Output
+1
