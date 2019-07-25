@@ -13,3 +13,52 @@ The above thing repeats for t no. of cases/times.
 //1 <= m,n <= 100
 //2 <= k <= 10 ; k <= m and k <= n
 //  Apply only for vertical and horizonlal streaks now.
+
+############
+7
+3 3 2
+x x o
+o x x
+x o x
+3 3 3
+x x o
+x x x
+o o o
+3 2 2
+x o
+o x
+x x
+2 2 2
+x x
+o o
+5 4 3
+x o x o
+o x o x
+o x o o
+x o o x
+x x o o
+4 2 2
+x o
+x o
+x x
+o o
+4 3 2
+x x o
+x o o
+o o x
+x x x
+Output:
+1 1
+2 0
+1 1
+0 0
+1 0
+3 2
+1 1
+2 0
+0 0
+0 1
+0 0
+0 0
+0 0
+0 0
