@@ -1,0 +1,15 @@
+m x n matrix where m is rows & n cols to be filled by knots (o) and crosses (x).
+The count of number of streaks of x or o found visible either in vertical , horizontal or diagonal direction should be outputted.
+Each streak should contain exactly k x's or o's. A streak is a contiguous placement of x or o.
+First input line is number of plays or tests wanted. Say "t".
+Second line is m n k where m = no. of rows, n = no. of cols and k is no. of characters in a streak.
+Third to m'th lines m x n matrix of x's and o's.
+(m+1)th line is again as same as above second line's entry.
+Based on the above line's entry the next m x n matrix of x's and o's repeats.
+The above thing repeats for t no. of cases/times.
+//Constraints
+//
+//1 <= t <= 1000
+//1 <= m,n <= 100
+//2 <= k <= 10 ; k <= m and k <= n
+//  Apply only for vertical and horizonlal streaks now.
