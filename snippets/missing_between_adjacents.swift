@@ -1,4 +1,4 @@
-let arr = [1, 2, 4, 3, 10, 9, 11]
+let arr = [1, 2, 4, 3, 10, 9, 11, 8, 13, 5, 12]
 
 for (index, item) in arr.enumerated() {
     //print(i)
@@ -10,15 +10,16 @@ for (index, item) in arr.enumerated() {
     if (nextElem > currElem) {
         len = nextElem - currElem
         if (len > 1) {
-            for i in currElem + 1..<nextElem {
-                print("between \(currElem) and \(nextElem) \(i)")
+            for i in stride(from: currElem + 1, to: nextElem, by: 1) {
+                print("between \(currElem) and \(nextElem): \(i)")
             }
         }
     } else if (currElem > nextElem) {
         len = currElem - nextElem
         if (len > 1) {
-            for i in currElem - 1..<nextElem + 1 {
-                print("between \(currElem) and \(nextElem) \(i)")
+            
+            for i in stride(from: currElem - 1, to: nextElem, by: -1) {
+                print("between \(currElem) and \(nextElem): \(i)")
             }
         }
     }
@@ -28,24 +29,23 @@ for (index, item) in arr.enumerated() {
         let currElem = item
 
         if (currElem > nextElem) {
-                if (nextElem > currElem) {
-                    len = nextElem - currElem
-                    if (len > 1) {
-                        for i in currElem + 1...nextElem - 1 {
-                            print("between \(currElem) and \(nextElem) \(i)")
+            len = currElem - nextElem
+                if (len > 1) {
+                        for i in stride(from: currElem + 1, to: nextElem, by: -1) {
+                            print("between \(currElem) and \(nextElem): \(i)")
                         }
-                    }
-                } else if (currElem > nextElem) {
-                    len = currElem - nextElem
-                    if (len > 1) {
-                        for i in currElem - 1...nextElem + 1 {
-                            print("between \(currElem) and \(nextElem) \(i)")
-                        }
-                    }
                 }
+            
+        } else if nextElem > currElem {
+            len = nextElem - currElem
+            if len > 1 {
+                for i in stride(from: currElem + 1, to: nextElem, by: 1) {
+                    print("between \(currElem) and \(nextElem): \(i)")
+                }
+            }
         }
     //print("breaking, curr elem = \(currElem) next elem = \(nextElem)")
     break
     }
-    
+
 }
