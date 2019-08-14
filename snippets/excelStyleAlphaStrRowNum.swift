@@ -120,34 +120,48 @@ func alphaNumberOf2(str: String) -> Int? {
         guard let x = alphaArr.firstIndex(of: strChar) else { return nil }
         //print("num for \(str) is \(x)")
         return x + 1
-    } else if str.count == 2 {
-        var tok = [Character]()
-        for token in str {
-            tok.append(token)
-        }
-        let tokChar0 = tok[0]
-        let tokChar1 = tok[1]
-        guard let x = alphaArr.firstIndex(of: tokChar1) else { return nil }
-        guard let y = alphaArr.firstIndex(of: tokChar0) else { return nil }
-        let strIndex =  baseNum + y + 1 + x + 1
-        return strIndex
-    } else if str.count == 3 {
-        var tok = [Character]()
-        for token in str {
-            tok.append(token)
-        }
-        //print(tok)
-        let tokChar0 = tok[0]
-        let tokChar1 = tok[1]
-        let tokChar2 = tok[2]
-        guard let x = alphaArr.firstIndex(of: tokChar0) else { return nil }
-        guard let y = alphaArr.firstIndex(of: tokChar1) else { return nil }
-        guard let z = alphaArr.firstIndex(of: tokChar2) else { return nil }
-        let strIndex = (2 * baseNum) + z + 1 + y + 1 + x + 1
-        return strIndex
     }
+//    } else if str.count == 2 {
+//        var tok = [Character]()
+//        for token in str {
+//            tok.append(token)
+//        }
+//        let tokChar0 = tok[0]
+//        let tokChar1 = tok[1]
+//        guard let x = alphaArr.firstIndex(of: tokChar1) else { return nil }
+//        guard let y = alphaArr.firstIndex(of: tokChar0) else { return nil }
+//        let strIndex =  baseNum + y + 1 + x + 1
+//        return strIndex
+//    } else if str.count == 3 {
+//        var tok = [Character]()
+//        for token in str {
+//            tok.append(token)
+//        }
+//        //print(tok)
+//        let tokChar0 = tok[0]
+//        let tokChar1 = tok[1]
+//        let tokChar2 = tok[2]
+//        guard let x = alphaArr.firstIndex(of: tokChar0) else { return nil }
+//        guard let y = alphaArr.firstIndex(of: tokChar1) else { return nil }
+//        guard let z = alphaArr.firstIndex(of: tokChar2) else { return nil }
+//        let strIndex = (2 * baseNum) + z + 1 + y + 1 + x + 1
+//        return strIndex
+//    }
     else {
-        return nil
+        let strCount = str.count
+        //var tok = [Character]()
+        var indexSummation = 0
+//        for token in str {
+//            tok.append(token)
+//        }
+        for char in str {
+            guard let x = alphaArr.firstIndex(of: char) else {
+                return nil
+            }
+            indexSummation += x + 1
+        }
+        let nFormula = (strCount - 1) * baseNum + indexSummation
+        return nFormula
     }
 }
 let timeInterval2_0 = NSDate().timeIntervalSince1970
